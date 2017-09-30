@@ -1,0 +1,11 @@
+f1mag = 3.4
+f2mag = 6
+f2v = sind(-30)*f2mag
+f1v = f1mag*sind(45)
+f1other = sqrt(f2mag^2 - f1v^2)
+f2other = sqrt(f1mag^2 - f2v^2)
+fx = f1other + f2other
+fy = abs(-3 + f1v)
+fmag = mag([fx,fy])
+z = atand(fy/fx)
+ans = [fmag z]

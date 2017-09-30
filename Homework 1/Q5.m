@@ -1,0 +1,11 @@
+f = [10 6 9]
+fmag = mag(f)
+pa = 116
+pb = 29.3
+pg = 77.4
+p = [pa,pb,pg]
+pxyz = 9.17 * abg2xyz(p)
+tmag = 16
+ty = -tmag * 3/5
+tz = tmag * 4/5
+t = [0 ty tz]

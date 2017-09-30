@@ -1,0 +1,35 @@
+amag = 20.5
+adeg = 13.9
+bmag = 11.9
+bdeg = 73.3
+cmag = 33.5
+cdeg = 148.2
+dmag = 13
+ddeg = 294.1
+% badeg = bdeg-adeg
+% r1 = lawofcosd(amag,bmag,badeg)
+% theta1 = atand(bmag*sind(badeg)/(amag+bmag*cosd(badeg)))
+% resangle1 = adeg + theta1
+% 
+% dcdeg = ddeg-cdeg
+% r2 = lawofcosd(cmag,dmag,dcdeg)
+% theta2 = atand(dmag*sind(dcdeg)/(cmag+dmag*cosd(dcdeg)))
+% resangle2 = dcdeg + theta2
+% 
+% resanglef = resangle2 - resangle1
+% rf = lawofcosd(r1,r2,resanglef)
+% finthet = atand(r2*sind(resanglef)/(r1+r2*cos(resanglef)))
+% fin = finthet + resangle1
+a = magang2xymat(amag,adeg)
+b = magang2xymat(bmag,bdeg)
+c = magang2xymat(cmag,cdeg)
+d = magang2xymat(dmag,ddeg)
+ab = a+b
+cd = c+d
+abmag = mag(ab)
+cdmag = mag(cd)
+abangle = angle(ab)
+cdangle = angle(cd)+180
+abcd = ab+cd
+abcdmag = mag(abcd)
+abcdangle = angle(abcd)

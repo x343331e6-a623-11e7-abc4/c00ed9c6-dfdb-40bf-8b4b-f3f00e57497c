@@ -1,0 +1,17 @@
+d1 = 23.5
+theta1 = 24
+d2 = 12
+theta2 = 138
+d3 = 18
+theta3 = -116
+D1 = [d1*cosd(theta1) d1*sind(theta1)]
+D2 = D1 + [d2*cosd(theta2) d2*sind(theta2)]
+D3 = D2 + abs([d3*cosd(theta3) d3*sind(theta3)])
+db = sqrt(D2(1)^2 + D2(2)^2)
+dd = sqrt(D3(1)^2 + D3(2)^2)
+angleb = atand(D2(2)/D2(1))
+angled = atand(D3(2)/D3(1))+180
+d4 = [0 110]
+d5 = d4 + abs([d3*cosd(theta3) d3*sind(theta3)])
+d5mag = sqrt(sum(d5.^2))
+d5theta = atand(d5(2)/d5(1))

@@ -1,0 +1,16 @@
+fab_mag = input('What is your Fab equal to?\n')
+a = [0 0 3]
+b = [2 4 0]
+c = [-3 -4 0]
+fac_mag = 150
+uab = (b-a)/mag(b-a)
+uac = (c-a)/mag(c-a)
+fab = fab_mag*uab
+fac = fac_mag * uac
+fr = fab + fac
+fr_mag = sig(mag(fr),3)
+abg_fr = sig(xyz2abg(fr_mag,fr),3)
+ans_a = fr_mag
+ans_b = abg_fr(1)
+ans_c = abg_fr(2)
+ans_d = abg_fr(3)

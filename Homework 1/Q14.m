@@ -1,0 +1,25 @@
+% http://www.chegg.com/homework-help/questions-and-answers/resultant-force-acting-bracket-required-minimum-determine-magnitude-f1-resultant-force-set-q5741537
+phi = 25
+% f1x = f1*sind(phi)
+f1xm = sind(phi)
+% f1y = f1*cosd(phi)
+f1ym = cosd(phi)
+f3 = 260
+f2x = 200
+f2y = 0
+f3x = f3 * 5 / 13
+f3y = -f3 *12 / 13
+% frx = f1x + f2x + f3x
+frx23 = f2x + f3x
+% fry = f1y + f2y + f3y
+fry23 = f2y + f3y
+% fr^2 = fry^2 + frx^2
+c = fry23^2 + frx23^2
+b1 = 2*frx23*f1xm
+b2 = 2*fry23*f1ym
+b = b1+b2
+a = f1xm^2 + f1ym^2
+db = 0.5 * b
+f1 = -db
+fr = sqrt(a*f1^2 + b*f1 + c)
+ans = sig([f1 fr],3)
